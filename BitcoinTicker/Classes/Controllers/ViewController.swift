@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     
     let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
     let currencyArray = ["AUD","BRL","CAD", "JPY","USD"]
+    let currencySymbleArray = ["$", "R$", "$", "¥", "$"]
+    var currencySelected = ""
     
     // MARK: - Life Cycle
 
@@ -41,9 +43,44 @@ class ViewController: UIViewController {
     
     // MARK: - Methods
     
-    private func updateUI() {
+    private func updateUI(price: Double) {
         
-        print("Updated UI.")
+        bitcoinView.priceLabel.text = "\(currencySelected)\(price)"
+        
+    }
+    
+    // MARK: - Networking
+    private func getBitcoinDate(url: String) {
+        
+        Alamofire.request(url, method: .get).responseJSON { (response) in
+            
+            if response.result.isSuccess {
+                
+                print("Get Bitcoin Data!")
+                let bitcoinJSON = JSON(response.result.value!)
+                self.updateBitcoinDate(json: bitcoinJSON)
+                
+            }
+            else {
+                
+                print("Error: \(String(describing: response.result.error))")
+                self.bitcoinView.priceLabel.text = "Connection Issues"
+                
+            }
+            
+        }
+        
+    }
+    
+    // MARK: - JSON Parsing
+    private func updateBitcoinDate(json: JSON) {
+        
+        if let bitcoinResult = json["ask"].double {
+            self.updateUI(price: bitcoinResult)
+        }
+        else {
+            self.bitcoinView.priceLabel.text = "Price Unavailab"
+        }
         
     }
 
@@ -75,8 +112,9 @@ extension ViewController: UIPickerViewDelegate {
         
         let requestURL = baseURL + currencyArray[row]
         
-        // Update UI
-        updateUI()
+        currencySelected = currencySymbleArray[row]
+        
+        getBitcoinDate(url: requestURL)
         
     }
     

@@ -15,8 +15,8 @@
 		68B7718B2054E2A300BE768D /* BitcoinTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7718A2054E2A300BE768D /* BitcoinTickerUITests.swift */; };
 		68B7719F2054E48400BE768D /* BitcoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7719E2054E48400BE768D /* BitcoinView.swift */; };
 		68B771A12054E86D00BE768D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B771A02054E86D00BE768D /* UIView.swift */; };
-		68B771A62054F8F700BE768D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B771A42054F8F700BE768D /* SwiftyJSON.framework */; };
-		68B771A72054F8F700BE768D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B771A52054F8F700BE768D /* Alamofire.framework */; };
+		68B771A82054FA5F00BE768D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B771A52054F8F700BE768D /* Alamofire.framework */; };
+		68B771AA2054FA9700BE768D /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B771A42054F8F700BE768D /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B771A62054F8F700BE768D /* SwiftyJSON.framework in Frameworks */,
-				68B771A72054F8F700BE768D /* Alamofire.framework in Frameworks */,
+				68B771AA2054FA9700BE768D /* SwiftyJSON.framework in Frameworks */,
+				68B771A82054FA5F00BE768D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +329,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwifyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
