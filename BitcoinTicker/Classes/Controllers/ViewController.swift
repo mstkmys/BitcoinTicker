@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -21,7 +23,7 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD"
+    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
     let currencyArray = ["AUD","BRL","CAD", "JPY","USD"]
     
     // MARK: - Life Cycle
@@ -71,7 +73,7 @@ extension ViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        print("Selected \(currencyArray[row])")
+        let requestURL = baseURL + currencyArray[row]
         
         // Update UI
         updateUI()
