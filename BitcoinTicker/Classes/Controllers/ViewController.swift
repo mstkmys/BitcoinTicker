@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     let bitcoinView: BitcoinView = {
         
         let bitcoinView = BitcoinView(frame: UIScreen.main.bounds)
-        bitcoinView.backgroundColor = .green
+        bitcoinView.backgroundColor = .white
         
         return bitcoinView
         
