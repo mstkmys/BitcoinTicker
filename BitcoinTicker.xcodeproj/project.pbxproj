@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		68B7716B2054E2A300BE768D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7716A2054E2A300BE768D /* AppDelegate.swift */; };
 		68B7716D2054E2A300BE768D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7716C2054E2A300BE768D /* ViewController.swift */; };
-		68B771702054E2A300BE768D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7716E2054E2A300BE768D /* Main.storyboard */; };
 		68B771722054E2A300BE768D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B771712054E2A300BE768D /* Assets.xcassets */; };
 		68B771752054E2A300BE768D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B771732054E2A300BE768D /* LaunchScreen.storyboard */; };
 		68B771802054E2A300BE768D /* BitcoinTickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7717F2054E2A300BE768D /* BitcoinTickerTests.swift */; };
 		68B7718B2054E2A300BE768D /* BitcoinTickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7718A2054E2A300BE768D /* BitcoinTickerUITests.swift */; };
+		68B7719F2054E48400BE768D /* BitcoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7719E2054E48400BE768D /* BitcoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 		68B771672054E2A300BE768D /* BitcoinTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B7716A2054E2A300BE768D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68B7716C2054E2A300BE768D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68B7716F2054E2A300BE768D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68B771712054E2A300BE768D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68B771742054E2A300BE768D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68B771762054E2A300BE768D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		68B771862054E2A300BE768D /* BitcoinTickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinTickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68B7718A2054E2A300BE768D /* BitcoinTickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinTickerUITests.swift; sourceTree = "<group>"; };
 		68B7718C2054E2A300BE768D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B7719E2054E48400BE768D /* BitcoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +97,9 @@
 		68B771692054E2A300BE768D /* BitcoinTicker */ = {
 			isa = PBXGroup;
 			children = (
+				68B771992054E44000BE768D /* Resources */,
+				68B771982054E43500BE768D /* Classes */,
 				68B7716A2054E2A300BE768D /* AppDelegate.swift */,
-				68B7716C2054E2A300BE768D /* ViewController.swift */,
-				68B7716E2054E2A300BE768D /* Main.storyboard */,
-				68B771712054E2A300BE768D /* Assets.xcassets */,
-				68B771732054E2A300BE768D /* LaunchScreen.storyboard */,
 				68B771762054E2A300BE768D /* Info.plist */,
 			);
 			path = BitcoinTicker;
@@ -123,6 +121,56 @@
 				68B7718C2054E2A300BE768D /* Info.plist */,
 			);
 			path = BitcoinTickerUITests;
+			sourceTree = "<group>";
+		};
+		68B771982054E43500BE768D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				68B7719D2054E46E00BE768D /* Models */,
+				68B7719C2054E46A00BE768D /* Views */,
+				68B7719B2054E46000BE768D /* Controllers */,
+				68B7719A2054E45500BE768D /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		68B771992054E44000BE768D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68B771712054E2A300BE768D /* Assets.xcassets */,
+				68B771732054E2A300BE768D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68B7719A2054E45500BE768D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		68B7719B2054E46000BE768D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				68B7716C2054E2A300BE768D /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		68B7719C2054E46A00BE768D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68B7719E2054E48400BE768D /* BitcoinView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68B7719D2054E46E00BE768D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +282,6 @@
 			files = (
 				68B771752054E2A300BE768D /* LaunchScreen.storyboard in Resources */,
 				68B771722054E2A300BE768D /* Assets.xcassets in Resources */,
-				68B771702054E2A300BE768D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B7716D2054E2A300BE768D /* ViewController.swift in Sources */,
+				68B7719F2054E48400BE768D /* BitcoinView.swift in Sources */,
 				68B7716B2054E2A300BE768D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,14 +344,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		68B7716E2054E2A300BE768D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68B7716F2054E2A300BE768D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		68B771732054E2A300BE768D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -363,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -429,11 +469,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = BitcoinTicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.BitcoinTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,11 +485,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFA67X5D5;
 				INFOPLIST_FILE = BitcoinTicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mstk.BitcoinTicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
