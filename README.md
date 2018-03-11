@@ -6,7 +6,7 @@
 )](https://developer.apple.com/swift)
 [![Twitter](https://img.shields.io/badge/twitter-@mstkmys-blue.svg?style=flat)](https://twitter.com/mstkmys)
 
-This app is search bitcoin prace
+![bitcointhicker](https://user-images.githubusercontent.com/12792235/37254039-01e1c980-257d-11e8-92f5-5c7cd963a010.gif)
 
 ## Author
 **Masataka Miyoshi**
