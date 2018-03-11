@@ -18,6 +18,13 @@ class ViewController: UIViewController {
         return bitcoinView
         
     }()
+    
+    // MARK: - Properties
+    
+    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD"
+    let currencyArray = ["AUD","BRL","CAD", "JPY","USD"]
+    
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +32,53 @@ class ViewController: UIViewController {
         // Add Views
         [bitcoinView].forEach{ self.view.addSubview($0) }
         
+        bitcoinView.pickerView.dataSource = self
+        bitcoinView.pickerView.delegate = self
+        
+    }
+    
+    // MARK: - Methods
+    
+    private func updateUI() {
+        
+        print("Updated UI.")
+        
     }
 
 }
 
+// MARK: - UIPickerViewDataSource
+/*************************************************************************************/
+extension ViewController: UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return currencyArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return currencyArray[row]
+    }
+    
+}
 
+// MARK: - UIPickerViewDelegate
+/*************************************************************************************/
+extension ViewController: UIPickerViewDelegate {
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        print("Selected \(currencyArray[row])")
+        
+        // Update UI
+        updateUI()
+        
+    }
+    
+}
 
 
 

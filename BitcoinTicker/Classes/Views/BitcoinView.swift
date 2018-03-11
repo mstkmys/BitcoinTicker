@@ -34,7 +34,6 @@ class BitcoinView: UIView {
     let pickerView: UIPickerView = {
         
         let pickerView = UIPickerView()
-        pickerView.backgroundColor = .red
         
         return pickerView
         
